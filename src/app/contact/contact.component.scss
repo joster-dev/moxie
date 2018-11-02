@@ -1,0 +1,31 @@
+@import '../../styles.scss';
+
+#contact {
+  background-color: $dark;
+  color: $light;
+}
+
+#hours,
+#location {
+  padding: $padding;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+#details {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+
+  div {
+    padding: $padding;
+  }
+}
+
+#map iframe {
+  border: 0;
+  width: 100%;
+  height: 500px;
+}

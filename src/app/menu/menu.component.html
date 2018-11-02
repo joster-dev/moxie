@@ -1,0 +1,37 @@
+<div id="banner">
+  <h2>Moxie's Joint<br>Cafe' & Grille</h2>
+  <nav>
+    <a routerLink="/menu">Menu</a>
+    <a class="button" routerLink="/contact">Contact</a>
+  </nav>
+</div>
+
+<div id="search">
+  <h3>Menu</h3>
+  <input type="search" [(ngModel)]="term" (ngModelChange)="search()" name="term" placeholder="Search the menu!" />
+</div>
+
+<div id="jump">
+  <a *ngFor="let item of menu" href="#{{item.title}}">
+    {{item.title}}
+  </a>
+</div>
+
+<div class="category" *ngFor="let category of menu">
+  <h3 class="title" [id]="category.title">{{category.title}}</h3>
+  <div class="entrees">
+    <div class="entree" *ngFor="let entree of category.entrees">
+      <header>
+        <h4>{{entree.title}}</h4>
+        <small>${{entree.cost}}</small>
+      </header>
+      <footer>
+        {{entree.description}}
+      </footer>
+    </div>
+  </div>
+</div>
+
+<h4 *ngIf="!menu.length">
+  No search results! Please clear the search filter
+</h4>

@@ -1,16 +1,8 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 #contact {
   background-color: $dark;
   color: $light;
-}
-
-#hours,
-#location {
-  padding: $padding;
-}
-
-#contact {
   display: flex;
   justify-content: space-between;
 }
@@ -24,8 +16,16 @@
   }
 }
 
-#map iframe {
-  border: 0;
-  width: 100%;
-  height: 500px;
+#map {
+  padding-top: $padding;
+  padding-right: $padding;
+  padding-left: $padding;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -1,11 +1,11 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 header {
   background-color: $dark;
   color: $light;
 }
 
-#search {
+#menu {
   display: grid;
   grid-template-columns: 3fr 2fr;
 }
@@ -39,6 +39,7 @@ header {
   }
 }
 
+#menu,
 .title {
   position: sticky;
   top: 0;

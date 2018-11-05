@@ -1,7 +1,8 @@
-import { Component } from '@angular/core'
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'moxie-root',
-  template: '<router-outlet></router-outlet>'
+  selector: "moxie-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {}

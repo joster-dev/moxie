@@ -1,0 +1,14 @@
+#banner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

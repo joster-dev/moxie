@@ -1,21 +1,21 @@
-import { Component } from '@angular/core'
+import { Component } from "@angular/core";
 
-import { menu, Category } from './menu'
+import { menu, Category } from "./menu";
 
 @Component({
-  selector: 'moxie-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: "moxie-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.scss"]
 })
 export class MenuComponent {
-  menu: Category[] = menu
-  term = ''
+  menu: Category[] = menu;
+  term = "";
 
   constructor() {}
 
   reset() {
-    this.term = ''
-    this.search()
+    this.term = "";
+    this.search();
   }
 
   search() {
@@ -28,8 +28,8 @@ export class MenuComponent {
               item.title.toLowerCase().includes(this.term.toLowerCase()) ||
               item.description.toLowerCase().includes(this.term.toLowerCase())
           )
-        })
+        });
       }, [])
-      .filter(category => category.entrees.length > 0)
+      .filter(category => category.entrees.length > 0);
   }
 }

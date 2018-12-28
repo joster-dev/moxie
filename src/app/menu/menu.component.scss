@@ -1,46 +1,10 @@
 @import "../../styles.scss";
 
+.pos-sticky {
+  margin-bottom: $padding;
+}
+
 header {
-  background-color: $dark;
-  color: $light;
-}
-
-#menu {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-}
-
-#jump {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  text-align: center;
-  a {
-    padding: $padding * 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.entrees {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  .entree {
-    padding: $padding;
-    header {
-      display: flex;
-      justify-content: space-between;
-    }
-    small,
-    footer {
-      padding: $padding;
-    }
-  }
-}
-
-#menu,
-.title {
-  position: sticky;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
 }

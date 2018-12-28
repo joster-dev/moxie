@@ -1,17 +1,19 @@
-<div id="menu">
-  <h3>Menu</h3>
+<div class="grid col-3-2">
+  <div id="Menu">
+    <h3>Menu</h3>
+  </div>
   <input type="search" [(ngModel)]="term" (ngModelChange)="search()" name="term" placeholder="Search the menu!" />
 </div>
 
-<div id="jump">
+<div class="grid col-r-3">
   <a *ngFor="let item of menu" href="#{{item.title}}">
     {{item.title}}
   </a>
 </div>
 
-<div class="category" *ngFor="let category of menu">
-  <h3 class="title" [id]="category.title">{{category.title}}</h3>
-  <div class="entrees">
+<div *ngFor="let category of menu">
+  <h3 class="pos-sticky" [id]="category.title">{{category.title}}</h3>
+  <div class="grid col-r-2">
     <div class="entree" *ngFor="let entree of category.entrees">
       <header>
         <h4>{{entree.title}}</h4>
